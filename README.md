@@ -38,6 +38,7 @@ Apredendo a codar: Um pequeno sistema em Python
 ```
 
 - A cotação das outras moedas deve vir da API https://economia.awesomeapi.com.br/all/USD-BRL para USD e https://economia.awesomeapi.com.br/all/EUR-BRL para EUR
+    - Caso prefira, você pode tentar pegar todas as moedas e depois internamente usar o identificador para encontrar a cotação com a URL https://economia.awesomeapi.com.br/all (recomendo esse caminho)
 - O catalogo a ser usado: catalog.txt (arquivo separado por TAB: \t)
   - deve ser carregado do arquivo no inicio do programa e deixado em uma estrutura de dados para acesso dos demais métodos
 
