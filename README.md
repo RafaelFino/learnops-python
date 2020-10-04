@@ -1,2 +1,61 @@
 # learnops-python
-A short python class project
+Apredendo a codar: Um pequeno sistema em Python
+
+## Requisitos básicos
+- Uma API capaz de responder um catalogo de produtos, com preço em BRL, USD e EUR
+    - método para responder o valor do EUR em função do BRL
+    - método para responder o valor do USD em função do BRL
+    - método para listar os produtos do catalogo com valor apenas em BRL
+    - método para listar todos os produtos com preços em todas as moedas listadas
+    - Formato da resposta
+``` json 
+    {   
+        "time": "HORARIO_DA_CONSULTA"
+        "products": 
+        [
+            {
+                "id": "ID_DO_PRODUTO1",
+                "name: "NOME_DO_PRODUTO1",
+                "prices": {
+                    "BRL": PRECO_BRL,
+                    "USD": PRECO_USD,
+                    "EUR": PRECO_EUR
+                }            
+            },
+            {
+                "id": "ID_DO_PRODUTO2",
+                "name: "NOME_DO_PRODUTO2",
+                "prices": {
+                    "BRL": PRECO_BRL,
+                    "USD": PRECO_USD,
+                    "EUR": PRECO_EUR
+                }            
+            }        
+        ]
+    }
+```
+- A cotação das outras moedas deve vir da API https://economia.awesomeapi.com.br/all/USD-BRL para USD e https://economia.awesomeapi.com.br/all/EUR-BRL para EUR
+- O catalogo a ser usado: catalog.txt (arquivo separado por TAB: \t)
+    - deve ser carregado do arquivo no inicio do programa e deixado em uma estrutura de dados para acesso dos demais métodos
+
+## Requisitos extras
+  - Use um banco de dados para armazenar as informações (postgres ou mysql)
+  - Crie um mecânismo de autênticação
+      - Uma integração com firebase usando login de redes sociais seria ótimo
+      - Apenas pedidos com autenticação podem ter acesso aos dados da API
+  - Crie uma interface web para exibir as informações
+  - Sua a aplicação usando containers
+  - Faça a automação de todo o processo de publicação e provisionamento da solução
+  - Publique seu código no git
+
+
+## Dicas
+- use python 3
+- usar virtualenv para criar o ambiente de desenvolvimento
+- user o fastAPI para fazer as APIs
+- crie classes para os dados que vai guardar em memória e para as respostas
+- user o modulo de json do próptio python para fazer as respostas
+
+
+Não entendeu qualquer coisa q está escrito aqui? pesquise, leia, anote as dúvidas (qualquer uma) e me pergunte
+
