@@ -55,9 +55,12 @@ Apredendo a codar: Um pequeno sistema em Python
 
 ## Dicas
 
-- use python 3
-- usar virtualenv para criar o ambiente de desenvolvimento
-- user o fastAPI para fazer as APIs
+- use python 3 (https://www.python.org/downloads/)
+  - Linux: https://python.org.br/instalacao-linux/
+  - Windows: https://python.org.br/instalacao-windows/
+- instale o pip como sudo/administrador (https://pip.pypa.io/en/stable/installing/)
+- usar virtualenv para criar o ambiente de desenvolvimento (https://virtualenv.pypa.io/en/latest/installation.html)
+- user o fastAPI para fazer as APIs (https://fastapi.tiangolo.com/deployment/)
 - crie classes para os dados que vai guardar em memória e para as respostas
 - user o modulo de json do próptio python para fazer as respostas
 
