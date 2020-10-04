@@ -40,11 +40,13 @@ Apredendo a codar: Um pequeno sistema em Python
 - A cotação das outras moedas deve vir da API https://economia.awesomeapi.com.br/all/USD-BRL para USD e https://economia.awesomeapi.com.br/all/EUR-BRL para EUR
     - Caso prefira, você pode tentar pegar todas as moedas e depois internamente usar o identificador para encontrar a cotação com a URL https://economia.awesomeapi.com.br/all (recomendo esse caminho)
 - O catalogo a ser usado: catalog.txt (arquivo separado por TAB: \t)
-  - deve ser carregado do arquivo no inicio do programa e deixado em uma estrutura de dados para acesso dos demais métodos
+  - deve ser carregado do arquivo no inicio do programa e deixado em uma estrutura de dados para acesso dos demais métodos (https://www.w3schools.com/python/python_file_handling.asp)
 
 ## Requisitos extras
 
-- Use um banco de dados para armazenar as informações (postgres ou mysql)
+- Use um banco de dados para armazenar as informações:
+  - postgres: https://www.postgresqltutorial.com/postgresql-python/
+  - mysql: https://www.w3schools.com/python/python_mysql_getstarted.asp
 - Crie um mecânismo de autênticação
   - Uma integração com firebase usando login de redes sociais seria ótimo
   - Apenas pedidos com autenticação podem ter acesso aos dados da API
@@ -55,12 +57,18 @@ Apredendo a codar: Um pequeno sistema em Python
 
 ## Dicas
 
+### Onde começar a procurar?
+https://www.w3schools.com/python/default.asp é uma ótima opção, tem muito conteúdo e de uma forma bem didática
+
+### Configurando o ambiente
 - use python 3 (https://www.python.org/downloads/)
   - Linux: https://python.org.br/instalacao-linux/
   - Windows: https://python.org.br/instalacao-windows/
 - instale o pip como sudo/administrador (https://pip.pypa.io/en/stable/installing/)
 - usar virtualenv para criar o ambiente de desenvolvimento (https://virtualenv.pypa.io/en/latest/installation.html)
 - user o fastAPI para fazer as APIs (https://fastapi.tiangolo.com/deployment/)
+  
+### Vai te evitar dor de cabeça no futuro
 - crie classes para os dados que vai guardar em memória e para as respostas
 - user o modulo de json do próptio python para fazer as respostas
 
@@ -88,4 +96,5 @@ source bin/activate
 ./run.sh
 ```
 
-Não entendeu qualquer coisa q está escrito aqui? pesquise, leia, anote as dúvidas (qualquer uma) e me pergunte
+Não entendeu qualquer coisa q está escrito aqui? pesquise, leia, anote as dúvidas (qualquer uma) e me pergunte.
+
