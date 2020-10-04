@@ -2,6 +2,8 @@
 
 Apredendo a codar: Um pequeno sistema em Python
 
+Leia, pode te ajudar: https://python.org.br/introducao/
+
 ## Requisitos básicos
 
 - Uma API capaz de responder um catalogo de produtos, com preço em BRL, USD e EUR
