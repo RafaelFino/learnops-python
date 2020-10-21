@@ -34,6 +34,8 @@ class ProductService:
             items = line.replace("\n", "").split("\t")
             ret.append(Product(items[0], items[1], "BRL", float(items[2])))
 
+        f.close()
+
         self.products = ret
 
     def refreshCurrencies(self):
@@ -42,7 +44,6 @@ class ProductService:
             r = requests.get(self._urls[key])
             ret[key] = r.json()[key]["ask"]
 
-        print(ret)
         self.currencies = ret
 
         for p in self.products:
