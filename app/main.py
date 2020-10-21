@@ -14,15 +14,24 @@ async def pong():
 
 @app.get("/products")
 async def ListProduct():
-    return service.products
+    return {
+        "time": datetime.now(),
+        "products": service.products
+    }
 
 
 @app.get("/currencies")
 async def GetCurrencies():
-    return service.currencies
+    return {
+        "currencies": service.currencies,
+        "last-refresh": service.lastRefresh
+    }
 
 
 @app.get("/refresh_currencies")
 async def RefreshCurrencies():
     service.refreshCurrencies()
-    return service.currencies
+    return {
+        "currencies": service.currencies,
+        "last-refresh": service.lastRefresh
+    }

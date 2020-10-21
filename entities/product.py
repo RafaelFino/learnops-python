@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 
 
 class Product:
@@ -17,6 +18,7 @@ class ProductService:
     _urls = {"USD": "https://economia.awesomeapi.com.br/all/USD-BRL",
              "EUR": "https://economia.awesomeapi.com.br/all/EUR-BRL"}
     currencies = {}
+    lastRefresh = ""
 
     def __init__(self, filePath):
         self._loadFromFile(filePath)
@@ -35,7 +37,7 @@ class ProductService:
         self.products = ret
 
     def refreshCurrencies(self):
-        ret = {}
+        ret = {"BRL": 1}
         for key in self._urls:
             r = requests.get(self._urls[key])
             ret[key] = r.json()[key]["ask"]
@@ -47,3 +49,5 @@ class ProductService:
             for currency in self.currencies:
                 p.prices[currency] = round(float(p.prices["BRL"]) /
                                            float(self.currencies[currency]), 2)
+
+        self.lastRefresh = datetime.now()

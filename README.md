@@ -16,6 +16,7 @@ Leia, pode te ajudar: https://python.org.br/introducao/
 ```json
 {
   "time": "HORARIO_DA_CONSULTA",
+  "last-refresh": "HORARIO_DA_COTACAO",
   "products": [
     {
       "id": "ID_DO_PRODUTO1",
