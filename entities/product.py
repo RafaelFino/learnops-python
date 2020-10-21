@@ -20,8 +20,7 @@ class ProductService:
 
     def __init__(self, filePath):
         self._loadFromFile(filePath)
-        self._getCurrency()
-        self._applyCurrency()
+        self.refreshCurrencies()
 
     def _loadFromFile(self, path):
         ret = []
@@ -35,7 +34,7 @@ class ProductService:
 
         self.products = ret
 
-    def _getCurrency(self):
+    def refreshCurrencies(self):
         ret = {}
         for key in self._urls:
             r = requests.get(self._urls[key])
@@ -44,7 +43,6 @@ class ProductService:
         print(ret)
         self.currencies = ret
 
-    def _applyCurrency(self):
         for p in self.products:
             for currency in self.currencies:
                 p.prices[currency] = round(float(p.prices["BRL"]) /

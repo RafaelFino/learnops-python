@@ -20,3 +20,9 @@ async def ListProduct():
 @app.get("/currencies")
 async def GetCurrencies():
     return service.currencies
+
+
+@app.get("/refresh_currencies")
+async def RefreshCurrencies():
+    service.refreshCurrencies()
+    return service.currencies
