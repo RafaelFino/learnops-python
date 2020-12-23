@@ -38,17 +38,20 @@ class ProductService:
 
         self.products = ret
 
-    def refreshCurrencies(self):
+    def refreshCurrencies(self):        
         ret = {"BRL": 1}
         for key in self._urls:
+            print("loading %s prices" % (key))
             r = requests.get(self._urls[key])
             ret[key] = r.json()[key]["ask"]
 
         self.currencies = ret
 
-        for p in self.products:
+        for p in self.products:            
             for currency in self.currencies:
                 p.prices[currency] = round(float(p.prices["BRL"]) /
                                            float(self.currencies[currency]), 2)
+
+                print("%s: %.2f %s" % (p.name, round(p.prices[currency],2), currency))
 
         self.lastRefresh = datetime.now()
